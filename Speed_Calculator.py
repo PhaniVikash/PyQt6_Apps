@@ -1,3 +1,4 @@
+from PyQt6.QtGui import QIcon
 from PyQt6.QtWidgets import (QApplication,QLabel ,QWidget ,
         QGridLayout ,QLineEdit , QPushButton,QComboBox)
 
@@ -8,6 +9,8 @@ class SpeedCalculator(QWidget):
         super().__init__()
 
         self.setWindowTitle("Speed Calculator ")
+        self.setWindowIcon(QIcon("Speed.png"))
+
         grid = QGridLayout()
 
         time_label  = QLabel("Time : ")

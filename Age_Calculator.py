@@ -1,3 +1,4 @@
+from PyQt6.QtGui import QIcon
 from PyQt6.QtWidgets import (QApplication,QLabel ,QWidget ,
         QGridLayout ,QLineEdit , QPushButton)
 
@@ -5,11 +6,14 @@ import sys
 from datetime import datetime
 
 
+
 class AgeCalculator(QWidget):
     def __init__(self):
         super().__init__()
 
+
         self.setWindowTitle("Age Calculator")
+        self.setWindowIcon(QIcon("Age.jpg"))
 
         grid = QGridLayout()
 
@@ -49,6 +53,7 @@ class AgeCalculator(QWidget):
 
 
 app = QApplication(sys.argv)
+
 age_calculator = AgeCalculator()
 age_calculator.show()
 sys.exit(app.exec())
